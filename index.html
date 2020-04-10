@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>shex to ui form</title>
+</head>
+
+<body> 
+
+ <script src="https://unpkg.com/@inrupt/solid-sdk-forms@0.1.0/dist/solid-forms.umd.js"></script>
+
+ <script type="text/javascript">
+
+ async function parse() {
+  try {
+   document.writeln("getting formModel...<br>");
+   const formModel = new solidForms.FormModel();
+   document.writeln("formModel= "+JSON.stringify(formModel)+"<br>");
+   const schema = await formModel.parseSchema("https://shexshapes.inrupt.net/public/userprofile.shex");
+   document.writeln("schema= "+JSON.stringify(schema)+"<br>");
+   const shexClass = new solidForms.ShexFormModel(schema);
+   document.writeln("shexClass= "+JSON.stringify(shexClass)+"<br>");
+   const formModelOutput = shexClass.convert();
+  }
+  catch(err) {
+   document.writeln(err+"<br>");
+  }
+ }
+ parse();
+</script> 
+
+</body>
+ 
+</html>
