@@ -15,7 +15,7 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX acl: <http://www.w3.org/ns/auth/acl#>
 PREFIX prov: <http://www.w3.org/ns/prov#>
 
-start=@<wit:DatasetShape>
+start=@<#wit:DatasetShape>
 
 wit:DatasetShape {
    dct:creator IRI;
