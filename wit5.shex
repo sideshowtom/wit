@@ -1,0 +1,77 @@
+#example shape file for wit catalogs
+ #
+ # The idea is that wit catalogs could span across pods, that they could contain any kind of data set, and that they
+ # could be navigated with a catalog browser as if they were on one pod and eventually have some features of version control.
+ # Other apps could be made to work on catalogs
+ #
+
+PREFIX ex: <http://ex.example/#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX wit: <http://wit.example/#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX acl: <http://www.w3.org/ns/auth/acl#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX : <http://wit.example/#>
+
+START=@<#MediaTypeShape>
+
+<#DatasetShape> {
+   dct:creator IRI;
+   dct:issued xsd:date;
+   dct:language IRI;
+   dct:modified xsd:date;
+   dct:title xsd:string;
+   dcat:downloadURL IRI;
+   dcat:mediaType @<#MediaTypeShape>;
+   acl:access @<#AccessShape>;
+   dct:license @<#LicenseShape>;
+   dct:rights @<#RightsShape>;
+   dct:accessRights @<#AccessRightsShape>;
+   prov:entity @<#ProvEntityShape>;
+}
+
+<#DataServiceShape> {
+   dcat:endpointDescription @<#EndpointDescriptionShape>;
+   dcat:endpointURL IRI;
+   dcat:servesDataset @<#DatasetShape>;
+   dct:accessRights @<#AccessRightsShape>;
+   dct:license @<#LicenseShape>;
+   dct:rights @<#RightsShape>;
+   prov:entity @<#ProvEntityShape>;
+}
+
+<#CatalogShape> {
+   dct:language IRI; 
+   dct:publisher IRI;
+   dct:title xsd:string;
+   dct:label xsd:string;
+   foaf:homepage IRI;
+   dcat:dataset @<#DatasetShape>;
+   dcat:service @<#DataServiceShape>;
+   dcat:catalog @<#CatalogShape>;
+   acl:access @<#AccessShape>;
+   dct:license @<#LicenseShape>;
+   dct:rights @<#RightsShape>;
+   dct:accessRights @<#AccessRightsShape>;
+   prov:entity @<#ProvEntityShape>;
+}
+
+<#MediaTypeShape> {
+   dcat:mediaType IRI;
+}
+<#AccessShape> {
+   acl:mode [acl:read acl:write acl:control acl:append]*
+}
+<#LicenseShape> {
+  dct:license xsd:string;
+}
+<#RightsShape> {
+  dct:rights xsd:string;
+}
+<#AccessRightsShape> {
+}
+<#ProvEntityShape> {
+}
