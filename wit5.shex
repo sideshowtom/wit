@@ -29,7 +29,7 @@ START=@<#DatasetShape>
    acl:access @<#AccessShape>;
    dct:license @<#LicenseShape>;
    dct:rights @<#RightsShape>;
-#  dct:accessRights @<#AccessRightsShape>;
+   dct:accessRights @<#AccessRightsShape>;
    prov:entity @<#ProvEntityShape>;
 }
 
@@ -50,6 +50,8 @@ START=@<#DatasetShape>
   dct:rights xsd:string;
 }
 <#AccessRightsShape> {
+  dct:accessRights xsd:string;
 }
 <#ProvEntityShape> {
+  prov:entity xsd:string;
 }
