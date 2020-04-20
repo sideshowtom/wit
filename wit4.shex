@@ -17,7 +17,7 @@ PREFIX acl: <http://www.w3.org/ns/auth/acl#>
 PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX : <http://wit.example/#>
 
-START=@<#MediaTypeShape>
+START=@<#DatasetShape>
 
 <#DatasetShape> {
    dct:creator IRI;
@@ -27,52 +27,10 @@ START=@<#MediaTypeShape>
    dct:title xsd:string;
    dcat:downloadURL IRI;
    dcat:mediaType @<#MediaTypeShape>;
-   acl:access @<#AccessShape>;
-   dct:license @<#LicenseShape>;
-   dct:rights @<#RightsShape>;
-   dct:accessRights @<#AccessRightsShape>;
-   prov:entity @<#ProvEntityShape>;
 }
 
-<#DataServiceShape> {
-   dcat:endpointDescription @<#EndpointDescriptionShape>;
-   dcat:endpointURL IRI;
-   dcat:servesDataset @<#DatasetShape>;
-   dct:accessRights @<#AccessRightsShape>;
-   dct:license @<#LicenseShape>;
-   dct:rights @<#RightsShape>;
-   prov:entity @<#ProvEntityShape>;
-}
 
-<#CatalogShape> {
-   dct:language IRI; 
-   dct:publisher IRI;
-   dct:title xsd:string;
-   dct:label xsd:string;
-   foaf:homepage IRI;
-   dcat:dataset @<#DatasetShape>;
-   dcat:service @<#DataServiceShape>;
-   dcat:catalog @<#CatalogShape>;
-   acl:access @<#AccessShape>;
-   dct:license @<#LicenseShape>;
-   dct:rights @<#RightsShape>;
-   dct:accessRights @<#AccessRightsShape>;
-   prov:entity @<#ProvEntityShape>;
-}
 
 <#MediaTypeShape> {
    dcat:mediaType IRI;
-}
-<#AccessShape> {
-   acl:mode [acl:read acl:write acl:control acl:append]*
-}
-<#LicenseShape> {
-  dct:license xsd:string;
-}
-<#RightsShape> {
-  dct:rights xsd:string;
-}
-<#AccessRightsShape> {
-}
-<#ProvEntityShape> {
 }
