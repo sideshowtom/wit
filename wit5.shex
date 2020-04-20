@@ -34,11 +34,6 @@ START=@<#CatalogShape>
 }
 
 <#CatalogShape> {
-   dct:language IRI; 
-   dct:publisher IRI;
-   dct:title xsd:string;
-   dct:label xsd:string;
-   foaf:homepage IRI;
    dcat:dataset @<#DatasetShape>;
 }
 
