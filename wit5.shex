@@ -26,7 +26,7 @@ START=@<#DatasetShape>
    dct:title xsd:string;
    dcat:downloadURL IRI;
    dcat:mediaType @<#MediaTypeShape>;
-#  acl:access @<#AccessShape>;
+   acl:access @<#AccessShape>;
 #  dct:license @<#LicenseShape>;
 #  dct:rights @<#RightsShape>;
 #  dct:accessRights @<#AccessRightsShape>;
