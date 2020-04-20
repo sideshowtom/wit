@@ -28,9 +28,9 @@ START=@<#DatasetShape>
    dcat:mediaType @<#MediaTypeShape>;
    acl:access @<#AccessShape>;
    dct:license @<#LicenseShape>;
-#  dct:rights @<#RightsShape>;
-#  dct:accessRights @<#AccessRightsShape>;
-#   prov:entity @<#ProvEntityShape>;
+   dct:rights @<#RightsShape>;
+   dct:accessRights @<#AccessRightsShape>;
+   prov:entity @<#ProvEntityShape>;
 }
 
 #<#CatalogShape> {
