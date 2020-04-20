@@ -29,8 +29,8 @@ START=@<#DatasetShape>
    acl:access @<#AccessShape>;
    dct:license @<#LicenseShape>;
    dct:rights @<#RightsShape>;
-   dct:accessRights @<#AccessRightsShape>;
- #  prov:entity @<#ProvEntityShape>;
+#  dct:accessRights @<#AccessRightsShape>;
+   prov:entity @<#ProvEntityShape>;
 }
 
 #<#CatalogShape> {
