@@ -72,8 +72,8 @@ START=@<#CatalogShape>
   dct:rights xsd:string;
 }
 <#AccessRightsShape> {
-  dct:accessRights xsd:string
+  dct:accessRights xsd:string;
 }
 <#ProvEntityShape> {
-  prov:entity xsd:string
+  prov:entity xsd:string;
 }
