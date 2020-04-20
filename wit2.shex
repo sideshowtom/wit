@@ -16,7 +16,7 @@ PREFIX acl: <http://www.w3.org/ns/auth/acl#>
 PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX : <http://wit.example/#>
 
-START=@<#MediaTypeShape>
+START=@<#CatalogShape>
 
 <#DatasetShape> {
    dct:creator IRI;
@@ -72,6 +72,8 @@ START=@<#MediaTypeShape>
   dct:rights xsd:string;
 }
 <#AccessRightsShape> {
+  dct:accessRights xsd:string
 }
 <#ProvEntityShape> {
+  prov:entity xsd:string
 }
