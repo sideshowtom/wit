@@ -77,3 +77,6 @@ START=@<#CatalogShape>
 <#ProvEntityShape> {
   prov:entity xsd:string;
 }
+<#EndpointDescriptionShape> {
+  dcat:endpointDescription xsd:string;
+}
