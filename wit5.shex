@@ -30,7 +30,7 @@ START=@<#DatasetShape>
    dct:license @<#LicenseShape>;
    dct:rights @<#RightsShape>;
    dct:accessRights @<#AccessRightsShape>;
-   prov:entity @<#ProvEntityShape>;
+ #  prov:entity @<#ProvEntityShape>;
 }
 
 #<#CatalogShape> {
