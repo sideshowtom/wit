@@ -27,7 +27,7 @@ START=@<#DatasetShape>
    dcat:downloadURL IRI;
    dcat:mediaType @<#MediaTypeShape>;
    acl:access @<#AccessShape>;
-#  dct:license @<#LicenseShape>;
+   dct:license @<#LicenseShape>;
 #  dct:rights @<#RightsShape>;
 #  dct:accessRights @<#AccessRightsShape>;
 #   prov:entity @<#ProvEntityShape>;
