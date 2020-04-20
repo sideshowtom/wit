@@ -50,7 +50,7 @@ START=@<#CatalogShape>
    dct:label xsd:string;
    foaf:homepage IRI;
    dcat:dataset @<#DatasetShape>;
-#   dcat:service @<#DataServiceShape>;
+   dcat:service @<#DataServiceShape>;
 #   dcat:catalog @<#CatalogShape>;
    acl:access @<#AccessShape>;
    dct:license @<#LicenseShape>;
