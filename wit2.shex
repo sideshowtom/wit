@@ -51,7 +51,7 @@ START=@<#CatalogShape>
    foaf:homepage IRI;
    dcat:dataset @<#DatasetShape>;
    dcat:service @<#DataServiceShape>;
-   dcat:catalog @<#CatalogShape>;
+ #  dcat:catalog @<#CatalogShape>;
    acl:access @<#AccessShape>;
    dct:license @<#LicenseShape>;
    dct:rights @<#RightsShape>;
