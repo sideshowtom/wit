@@ -36,7 +36,7 @@ START=@<#CatalogShape>
 <#DataServiceShape> {
    dcat:endpointDescription @<#EndpointDescriptionShape>;
    dcat:endpointURL IRI;
-   dcat:servesDataset @<#DatasetShape>;
+#   dcat:servesDataset @<#DatasetShape>;
    dct:accessRights @<#AccessRightsShape>;
    dct:license @<#LicenseShape>;
    dct:rights @<#RightsShape>;
