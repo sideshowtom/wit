@@ -20,6 +20,28 @@ start=@<#wit:DatasetShape>
 wit:DatasetShape {
    dct:creator IRI;
    dct:issued xsd:date;
+#example shape file for wit catalogs
+ #
+ # The idea is that wit catalogs could span across pods, that they could contain any kind of data set, and that they
+ # could be navigated with a catalog browser as if they were on one pod and eventually have some features of version control.
+ # Other apps could be made to work on catalogs
+ #
+
+PREFIX ex: <http://ex.example/#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX wit: <http://wit.example/#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX acl: <http://www.w3.org/ns/auth/acl#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+
+start=@<#wit:DatasetShape>
+
+wit:DatasetShape {
+   dct:creator IRI;
+   dct:issued xsd:date;
    dct:language IRI;
    dct:modified xsd:date;
    dct:title xsd:string;
@@ -50,7 +72,7 @@ wit:CatalogShape {
    foaf:homepage IRI;
    dcat:dataset @wit:DatasetShape;
    dcat:service @wit:DataServiceShape;
-   dcat:catalog @wit:CatalogShape;
+#   dcat:catalog @wit:CatalogShape;
    acl:access @wit:AccessShape;
    dct:license @wit:LicenseShape;
    dct:rights @wit:RightsShape;
@@ -71,6 +93,8 @@ wit:RightsShape {
   dct:rights xsd:string;
 }
 wit:AccessRightsShape {
+  dct:accessRights xsd:string;
 }
 wit:ProvEntityShape {
+  prov:entity xsd:string;
 }
