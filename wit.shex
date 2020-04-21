@@ -77,5 +77,5 @@ wit:ProvEntityShape {
   prov:entity xsd:string;
 }
 wit:EndpointDescriptionShape {
-  dcat:endpointDescription xsd:string
+  dcat:endpointDescription xsd:string;
 }
